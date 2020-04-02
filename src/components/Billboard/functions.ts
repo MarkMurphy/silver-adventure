@@ -2,7 +2,8 @@ export const getMovieBackdropURL = (
   movie: TMDB.Movie,
   size: string = 'original'
 ) => {
-  return `https://image.tmdb.org/t/p/${size}/${movie.backdrop_path}`;
+  const path = movie.backdrop_path ? movie.backdrop_path : movie.poster_path;
+  return `https://image.tmdb.org/t/p/${size}/${path}`;
 };
 
 export const formatReleaseDate = (movie: TMDB.Movie) => {

@@ -2,7 +2,9 @@ import { css, cx } from 'emotion';
 
 const fonts = {
   body: css({
-    lineHeight: '1.46667'
+    fontSize: '17px',
+    lineHeight: '1.46667',
+    fontWeight: 400
   }),
   header: css({
     fontSize: '34px',
@@ -44,7 +46,7 @@ const fonts = {
 
 const emphasize = {
   header: css({
-    fontWeight: 400
+    fontWeight: 700
   }),
   title: css({
     fontWeight: 600
@@ -74,16 +76,16 @@ const transform = {
 
 const colors = {
   primary: css({
-    color: 'var(--primary)'
+    color: 'var(--text-color-primary)'
   }),
   secondary: css({
-    color: 'var(--secondary)'
+    color: 'var(--text-color-secondary)'
   }),
   tertiary: css({
-    color: 'var(--tertiary)'
+    color: 'var(--text-color-tertiary)'
   }),
   quaternary: css({
-    color: 'var(--quaternary)'
+    color: 'var(--text-color-quaternary)'
   })
 };
 

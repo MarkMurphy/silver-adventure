@@ -20,7 +20,9 @@ const Home = () => {
       </Head>
 
       <main>
-        <Billboard {...movie} />
+        {movies.map((movie) => (
+          <Billboard key={movie.id} {...movie} />
+        ))}
       </main>
 
       <style jsx>{`

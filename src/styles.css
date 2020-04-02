@@ -12,13 +12,12 @@ body {
 
 :root {
   color-scheme: light dark;
-
   --primary: rgba(0, 0, 0, 0.95);
   --secondary: rgba(0, 0, 0, 0.65);
   --tertiary: rgba(0, 0, 0, 0.4);
   --quaternary: rgba(0, 0, 0, 0.2);
-
-  /* --system-gray: #8e8e93;
+  /*
+  --system-gray: #8e8e93;
   --system-gray-rgb: 142, 142, 147;
   --system-gray-deep-pressed: #56565a;
   --system-gray-deep-pressed-rgb: 86, 86, 90;
@@ -29,13 +28,19 @@ body {
   --system-gray-rollover-rgb: 86, 86, 90;
   --system-green: #28cd41;
   --system-green-rgb: 40, 205, 65;
-  --systemRed: #ff3b30;
-  --systemRed-rgb: 255, 59, 48; */
+  --system-red: #ff3b30;
+  --system-red-rgb: 255, 59, 48;
+  */
+  --text-color-primary: rgba(0, 0, 0, 1);
+  --text-color-secondary: rgba(60, 60, 67, 0.6);
+  --text-color-tertiary: rgba(60, 60, 67, 0.3);
+  --text-color-quaternary: rgba(60, 60, 67, 0.18);
   --text-color-rgb: 0, 0, 0;
   --text-color: rgba(var(--text-color-rgb), 0.95);
   --primary-color: #007aff;
   --primary-color-rgb: 0, 122, 255;
-  /* --primary-color-rollover: #0045b7;
+  /*
+  --primary-color-rollover: #0045b7;
   --primary-color-rollover-rgb: 0, 69, 183;
   --primary-color-pressed: #005cd7;
   --primary-color-pressed-rgb: 0, 92, 215;
@@ -51,7 +56,8 @@ body {
   --vibrant-secondary: rgba(60, 60, 67, 0.5);
   --vibrant-tertiary: rgba(60, 60, 67, 0.3);
   --vibrant-quaternary: rgba(60, 60, 67, 0.18);
-  --vibrant-divider: rgba(60, 60, 67, 0.29); */
+  --vibrant-divider: rgba(60, 60, 67, 0.29);
+  */
   --search-border: rgba(0, 0, 0, 0.15);
   --search-icon-drop-shadow: rgba(0, 0, 0, 0.15);
   --search-hints-bg: rgba(232, 232, 232, 0.9);
@@ -67,7 +73,8 @@ body {
     --secondary: rgba(255, 255, 255, 0.55);
     --tertiary: rgba(255, 255, 255, 0.25);
     --quaternary: rgba(255, 255, 255, 0.1);
-    /* --system-gray: #98989d;
+    /*
+    --system-gray: #98989d;
     --system-gray-rgb: 152, 152, 157;
     --system-gray-deep-pressed: #d5d5da;
     --system-gray-deep-pressed-rgb: 213, 213, 218;
@@ -78,12 +85,15 @@ body {
     --system-gray-rollover-rgb: 213, 213, 218;
     --system-green: #32d74b;
     --system-green-rgb: 50, 215, 75;
-    --systemRed: #ff453a;
-    --systemRed-rgb: 255, 69, 58; */
-
+    --system-red: #ff453a;
+    --system-red-rgb: 255, 69, 58;
+    */
+    --text-color-primary: rgba(255, 255, 255, 1);
+    --text-color-secondary: rgba(235, 235, 245, 0.6);
+    --text-color-tertiary: rgba(235, 235, 245, 0.3);
+    --text-color-quaternary: rgba(235, 235, 245, 0.16);
     --text-color-rgb: 255, 255, 255;
     --text-color: rgba(var(--text-color-rgb), 0.95);
-
     --primary-color: #0a84ff;
     --primary-color-rgb: 10, 132, 255;
     --primary-color-rollover: #47c1ff;
