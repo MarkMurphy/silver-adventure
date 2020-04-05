@@ -97,6 +97,7 @@ interface Props {
   color?: Color;
   emphasized?: boolean;
   upcase?: boolean;
+  className?: string;
 }
 
 const Text: React.FC<Props> = ({
@@ -104,7 +105,8 @@ const Text: React.FC<Props> = ({
   font,
   color = 'primary',
   emphasized,
-  upcase
+  upcase,
+  className
 }) => {
   return (
     <span
@@ -112,7 +114,8 @@ const Text: React.FC<Props> = ({
         fonts[font],
         colors[color],
         emphasized && emphasize[font],
-        upcase && transform.uppercase
+        upcase && transform.uppercase,
+        className
       )}
     >
       {children}

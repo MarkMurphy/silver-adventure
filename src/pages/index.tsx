@@ -1,10 +1,15 @@
 import Head from 'next/head';
 import useRequest from '../hooks/useRequest';
 import Billboard from '../components/Billboard';
+import MediaShelf from '../components/MediaShelf';
 
 const Home = () => {
+  const { data: configData, error: configError } = useRequest('/configuration');
+
+  console.log({ configData, configError });
+
   const { data, error } = useRequest('/discover/movie', {
-    sortBy: 'popularity.desc'
+    sortBy: 'popularity.desc',
   });
 
   if (error) return <div>failed to load</div>;
@@ -15,14 +20,20 @@ const Home = () => {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Silver</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        {movies.map((movie) => (
-          <Billboard key={movie.id} {...movie} />
-        ))}
+        <section style={{ marginBottom: 32 }}>
+          {[movie].map((movie) => (
+            <Billboard key={movie.id} {...movie} />
+          ))}
+        </section>
+
+        <section>
+          <MediaShelf title="Popular Movies" items={movies} />
+        </section>
       </main>
 
       <style jsx>{`

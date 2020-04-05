@@ -15,4 +15,23 @@ declare namespace TMDB {
     overview: string;
     release_date: string;
   }
+
+  export namespace Images {
+    export enum BackdropSize {
+      SM = 'w300',
+      MD = 'w780',
+      LG = 'w1280',
+      SRC = 'original',
+    }
+
+    export enum PosterSize {
+      XXS = 'w92',
+      XS = 'w154',
+      SM = 'w185',
+      MD = 'w342',
+      LG = 'w500',
+      XL = 'w780',
+      SRC = 'original',
+    }
+  }
 }

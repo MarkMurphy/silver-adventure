@@ -7,8 +7,10 @@ import { getMovieBackdropURL, formatReleaseDate } from './functions';
 const styles = {
   billboard: css({
     position: 'relative',
-    width: '100%',
+    width: '100vw',
     height: '100vh',
+    maxWidth: '100%',
+    maxHeight: '100%',
     '&:before': {
       content: '""',
       display: 'block',
@@ -21,13 +23,13 @@ const styles = {
       bottom: '0',
       opacity: '1',
       transition: 'opacity 500ms',
-      zIndex: 1
-    }
+      zIndex: 1,
+    },
   }),
   backdrop: css({
     width: '100%',
     height: '100%',
-    objectFit: 'cover'
+    objectFit: 'cover',
   }),
   details: css({
     display: 'flex',
@@ -38,13 +40,13 @@ const styles = {
     width: '40em',
     maxWidth: 'calc(100% - 30vh)',
     textShadow: 'rgba(0, 0, 0, 0.45) 2px 2px 4px',
-    zIndex: 2
+    zIndex: 2,
   }),
   actions: css({
     gridTemplateColumns: '1fr 1fr',
     width: 'fit-content',
-    marginTop: '1.5rem'
-  })
+    marginTop: '1.5rem',
+  }),
 };
 
 const Billboard = (props: TMDB.Movie) => {
@@ -59,7 +61,7 @@ const Billboard = (props: TMDB.Movie) => {
         <Text font="header" emphasized>
           {props.title}
         </Text>
-        <Stack className={styles.actions} row>
+        <Stack className={styles.actions}>
           <Button>Trailer</Button>
           <Button color="secondary">Watch Now</Button>
         </Stack>

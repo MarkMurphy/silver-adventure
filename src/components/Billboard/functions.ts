@@ -1,6 +1,13 @@
+enum BackdropSize {
+  SM = 'w300',
+  MD = 'w780',
+  LG = 'w1280',
+  XL = 'original',
+}
+
 export const getMovieBackdropURL = (
   movie: TMDB.Movie,
-  size: string = 'original'
+  size: BackdropSize = BackdropSize.LG
 ) => {
   const path = movie.backdrop_path ? movie.backdrop_path : movie.poster_path;
   return `https://image.tmdb.org/t/p/${size}/${path}`;
