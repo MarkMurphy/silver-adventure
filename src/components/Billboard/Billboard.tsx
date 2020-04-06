@@ -52,7 +52,7 @@ const styles = {
 const Billboard = (props: TMDB.Movie) => {
   const backdrop = getMovieBackdropURL(props);
   return (
-    <div className={styles.billboard}>
+    <div className={styles.billboard} data-theme="dark">
       <img className={styles.backdrop} src={backdrop} alt={props.title} />
       <div className={styles.details}>
         <Text font="subheadline" color="secondary" upcase>
