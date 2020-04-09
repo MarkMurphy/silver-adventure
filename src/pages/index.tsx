@@ -22,7 +22,7 @@ const Home = () => {
       <Head>
         <title>Silver</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="/scripts/theme.js" />
+        <script src="js/theme.js" />
       </Head>
 
       <main>
